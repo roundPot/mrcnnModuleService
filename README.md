@@ -20,7 +20,7 @@ Mostly I used the same build as like the MRCNN Repository and the Tutorial on Tr
 - **IPython[all]**
 
 ## how to use:
-- Make shure you have the Imports/Dependencies above
+- Make sure you have the Imports/Dependencies above
 - Copy the python file **mrcnnModuleService** in the same directory as like the **mrcnn** directory
 - Import in your Code: from mrcnnModuleService import NeuralNetService (if you do not want a separate Process, import the NeuralNet class)
 - Create a new network Configuration(example found in **mrcnnModuleService** I used in a different Project), should be similar to the Configuration your network was trained with
