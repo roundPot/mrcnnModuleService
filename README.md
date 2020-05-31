@@ -22,7 +22,7 @@ Mostly I used the same build as like the MRCNN Repository and the Tutorial on Tr
 ## how to use:
 - Make shure you have the Imports/Dependencies above
 - Copy the python file **mrcnnModuleService** in the same directory as like the **mrcnn** directory
-- Import in your Code: from mrcnnModuleService import NeuralNetService
+- Import in your Code: from mrcnnModuleService import NeuralNetService (if you do not want a separate Process, import the NeuralNet class)
 - Create a new network Configuration(example found in **mrcnnModuleService** I used in a different Project), should be similar to the Configuration your network was trained with
 - Create a new NeuralNetService-Object, as params you give the Configuration and the absolute Path to the loading weights
 - Start the Process using the **start_service()** Method
