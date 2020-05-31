@@ -90,11 +90,11 @@ class NeuralNetService:
                 break
             output_queue.put(net.predict(input))
 
-    def init_service(self, netConf, pathObjWeights, start=False):
+    def init_service(self, netConf, ptweights, start=False):
         """
         Initiates a new process, the old one will be shutten down and overwritten.
         :param netConf: NeuralNetConfiguration, adapted to your weights
-        :param pathObjWeights: the absolute Path to your weights
+        :param ptweights: the absolute Path to your weights
         :param start: If set to True, will start the service on Initialisation. Default: False
         :return: None
         """
@@ -108,7 +108,7 @@ class NeuralNetService:
                 self.shut_down_service()
 
         self._process = Process(target=self._start_neuralnet_service,
-                                args=(netConf, pathObjWeights, self._input_queue, self._output_queue,
+                                args=(netConf, ptweights, self._input_queue, self._output_queue,
                                       self._shut_down_event),
                                 daemon=True)
         if start:
